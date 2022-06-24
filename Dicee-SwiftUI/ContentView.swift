@@ -15,11 +15,14 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 Image("diceeLogo")
+                    
+                Spacer()
                 HStack {
                     DiceView(n: 1)
                     DiceView(n: 2)
                 }
                 .padding(.horizontal)
+                Spacer()
                 Button(action: {
                     
                 }) {
@@ -42,6 +45,7 @@ struct DiceView: View {
         Image("dice\(n)")
             .resizable()
             .aspectRatio(contentMode: .fit)
+            .padding()
     }
 }
 struct ContentView_Previews: PreviewProvider {
