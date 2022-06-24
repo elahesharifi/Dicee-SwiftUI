@@ -13,12 +13,30 @@ struct ContentView: View {
             Image("background")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
+            VStack {
+                Image("diceeLogo")
+                HStack {
+                    DiceView(n: 1)
+                    DiceView(n: 2)
+                }
+                .padding(.horizontal)
+            }
         }
     }
 }
 
+struct DiceView: View {
+    
+    let n: Int
+    var body: some View {
+        Image("dice\(n)")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
