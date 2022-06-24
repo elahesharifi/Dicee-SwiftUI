@@ -20,6 +20,16 @@ struct ContentView: View {
                     DiceView(n: 2)
                 }
                 .padding(.horizontal)
+                Button(action: {
+                    
+                }) {
+                    Text("Roll")
+                        .font(.system(size: 40))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .padding(.horizontal)
+                }
+                .background(Color.red)
             }
         }
     }
